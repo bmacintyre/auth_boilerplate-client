@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Please Login
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row class="mainContainerRow">
+            <ion-card>
+                <ion-grid>
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" autocomplete="off">
+                        <ion-row><span style="height: 10px"></span></ion-row>
+                        <ion-row>
+                            <ion-input required name="username" type="text" [(ngModel)]="username" placeholder="Enter Username / Email"></ion-input>
+                        </ion-row>
+                        <ion-row><span style="height: 15px"></span></ion-row>
+                        <ion-row>
+                            <ion-input required name="password" [(ngModel)]="password" placeholder="Enter Password"
+                                type="password"></ion-input>
+                        </ion-row>
+                        <ion-row><span style="height: 15px"></span></ion-row>
+                        <ion-row>
+                            <ion-button class="loginBtn" button ion-button full type="submit"
+                                [disabled]="!loginForm.form.valid">
+                                Login
+                            </ion-button>
+                        </ion-row>
+                    </form>
+                </ion-grid>
+            </ion-card>
+        </ion-row>
+        <!-- <ion-label class="outputLabel">Output</ion-label>
+        <div class="output">
+            {{ user }}
+        </div> -->
+    </ion-grid>
+
+
+
+</ion-content>

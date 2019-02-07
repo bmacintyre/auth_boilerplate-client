@@ -1,0 +1,9 @@
+.is-inactive {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.6;         //This grays it out to look disabled
+}
+
+.is-active {
+    pointer-events:auto; //This makes it not clickable
+    opacity:1;         //This grays it out to look disabled
+}
