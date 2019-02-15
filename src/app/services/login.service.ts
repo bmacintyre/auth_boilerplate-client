@@ -10,7 +10,7 @@ export class LoginService {
     public global: GlobalService;
 
     // PHP 7.x API
-    private apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
+    private apiUrl = 'http://brucemacintyre.com/fullstack_php/php/login.php';
 
     // Python 3.x API
     // private apiUrl = 'http://localhost:5000/api';

@@ -6,30 +6,30 @@
 
 :root {
   ion-title {
-    color: white;
+    color: #FFBF00;
   }
 
   ion-card-header {
-    color: white;
+    color: #FFBF00;
   }
 
   ion-back-button {
-    color: white;
+    color: #FFBF00;
   }
 
-  --ion-componentcard-background-color: grey;
+  --ion-componentcard-background-color: #726E75;
 
-  --ion-item-ios-background-color: linear-gradient(to bottom, #434343, #222428);
-  --ion-item-md-background-color: linear-gradient(to bottom, #434343, #222428);
+  --ion-item-ios-background-color: linear-gradient(to bottom, #948B89, #726E75);
+  --ion-item-md-background-color: linear-gradient(to bottom, #948B89, #726E75);
   --ion-tabbar-background-color: #222428;
-  --ion-tabbar-ios-text-color-active: #FFFFFF;
-  --ion-tabbar-md-text-color-active: #ffffff;
+  --ion-tabbar-ios-text-color-active: #FFBF00;
+  --ion-tabbar-md-text-color-active: #FFBF00;
   --ion-background-color: linear-gradient(to bottom, #434343, #222428);
 
   /** primary **/
   --ion-color-primary: #222428;
   --ion-color-primary-rgb: 34,34,34;
-  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast: #FFBF00;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #1e2023;
   --ion-color-primary-tint: #383a3e;
@@ -91,7 +91,7 @@
   --ion-color-medium-tint: #a2a4ab;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light: #FFBF00;
   --ion-color-light-rgb: 244, 244, 244;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;

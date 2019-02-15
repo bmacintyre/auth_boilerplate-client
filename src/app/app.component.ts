@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, ModalController } from '@ionic/angular';
+import { Platform, ModalController, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Store } from '@ngrx/store';
@@ -15,13 +15,14 @@ export class AppComponent {
 
   public appPages: any[] = [
     { icon: 'analytics', url: '/dash', title: 'Dashboard'},
-    { icon: 'settings', url: '/settings', title: 'Settings'}
+    { icon: 'people', url: '/people', title: 'People'}
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private menuCtrl: MenuController,
     private store: Store<any>
   ) {
     this.initializeApp();
@@ -38,5 +39,18 @@ export class AppComponent {
         }
       });
     });
+  }
+
+  bgClick() {
+    console.log('bgClick');
+    this.menuCtrl.close();
+  }
+
+  getAppWidth() {
+   if (this.platform.width() > 767) {
+      return '225px';
+   } else {
+     return this.platform.width() + 'px';
+   }
   }
 }

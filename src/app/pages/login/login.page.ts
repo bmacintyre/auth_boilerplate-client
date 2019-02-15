@@ -7,7 +7,7 @@ import { LoginAction } from './../../store/reducers/user.reducer';
 import { Observable } from 'rxjs';
 import { TokenAction } from './../../store/reducers/token.reducer';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, MenuController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -24,7 +24,10 @@ export class LoginPage {
   public token = '';
   public user = '';
 
-  constructor(public modalController: ModalController, public http: HttpClient, private store: Store<any>, private router: Router) {
+  constructor(public modalController: ModalController,
+    public http: HttpClient,
+    private store: Store<any>,
+    private router: Router) {
     this.global = new GlobalService();
   }
 

@@ -1,14 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-        <button ion-button menuToggle class="btn btn-dark">
-            <!-- <ion-icon name='menu' style="transform: scale(1.3)"></ion-icon> -->
-            <!-- <ion-back-button></ion-back-button> -->
-        </button>
+      <ion-menu-button autoHide="true"></ion-menu-button>
     </ion-buttons>
     <ion-title>Dashboard</ion-title>
     <ion-buttons slot="end">
-        <!-- <ion-button class="btn btn-primary" (click)="getData()">
+      <!-- <ion-button class="btn btn-primary" (click)="getData()">
             Get More Data
           </ion-button> -->
       <div class="btn-group" style="height:37px; margin-top: 4px; padding-left: 20px;">
@@ -36,7 +33,7 @@
 
   <ion-grid>
     <ion-row>
-        <app-server-status></app-server-status>
+      <app-server-status></app-server-status>
     </ion-row>
   </ion-grid>
 

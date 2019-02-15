@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 export class DashPage implements OnInit {
 
   // PHP 7.x
-  private apiUrl = 'http://localhost/auth_boilerplate/api/php/data.php?s=mobile';
+  private apiUrl = 'http://brucemacintyre.com/fullstack_php/data.php?s=mobile';
 
   // Python 3.x
   // private apiUrl = 'http://localhost:5000/auth_boilerplate/api/python/data';

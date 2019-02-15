@@ -1,12 +1,12 @@
 <ion-app>
   <ion-split-pane when="md">
-    <ion-menu style="max-width: 120px">
+    <ion-menu side="start" [ngStyle]="{'max-width': getAppWidth()}">
       <ion-header>
         <ion-toolbar>
           <ion-title>Options</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-content (click)="bgClick()">
         <ion-list [ngClass]="{
               'is-active': isLoggedIn,
               'is-inactive': !isLoggedIn
