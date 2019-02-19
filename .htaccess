@@ -1,0 +1,5 @@
+AddHandler application/x-httpd-php5 .php .php3 .php4 .php5 .phtml
+
+<ifModule mod_headers.c>
+Header set Access-Control-Allow-Origin: *
+</ifModule>

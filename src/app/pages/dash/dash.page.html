@@ -29,18 +29,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div class="outerContainer">
+     <br><br><br>
+   
+        <canvas class="doughnutChart" #doughnutCanvas></canvas>
 
-  <ion-grid>
-    <ion-row>
-      <app-server-status></app-server-status>
-    </ion-row>
-  </ion-grid>
+  </div>
 
-  <ion-card style="width: 90%; height: auto">
-    <ion-card-content>
-      <canvas #lineCanvas></canvas>
-    </ion-card-content>
-  </ion-card>
 
 </ion-content>

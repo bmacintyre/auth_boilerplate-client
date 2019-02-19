@@ -7,6 +7,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div class="outerContainer">
+    <!-- <button (click)="pushItem()">Add item</button>
+    <button (click)="removeItem()">Remove item</button> -->
+    <div class="container" id="container" [@listAnimation]="items.length">
+      <!-- <div class="profileContainer" id="list" *ngFor="let item of items" block> -->
+       
+            <ul>
+              <li *ngFor="let item of items; let i = index">
+                  <div class="mugShot">
+                      <ion-spinner style="margin-top: 20px" [ngStyle]="{'display': (!!item.loaded && item.loaded === true) ? 'none' : 'visible'}"></ion-spinner>
+                      <ion-img class="avatar" style="margin-top: 10px" src='{{ item.photo }}' (ionImgDidLoad)="imageLoaded(i)"
+                      [ngStyle]="{'height': (!!item.loaded && item.loaded === true) ? '80px' : '0px', 'opacity': (!!item.loaded && item.loaded === true) ? '1' : '0'}"></ion-img>
+                      <h6 class="labelTxt"><b>{{ item.name }}</b></h6>
+                    </div>
+              </li>
+            </ul>
 
+
+                <!-- <div class="detailsBlock">
+                    <div class="mugShot">
+                        <ion-img class="avatar" src='{{ item.photo }}'></ion-img>
+                        <h6 class="labelTxt"><b>{{ item.name }}</b></h6>
+                      </div>
+                  <h4 class="title"><b>{{ item.position }}</b></h4>
+                  <div class="userData">
+                    <h5>{{ item.email }}</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua.</p>
+                  </div>
+                </div> -->
+         
+          
+      <!-- </div> -->
+    </div>
+  </div>
 </ion-content>

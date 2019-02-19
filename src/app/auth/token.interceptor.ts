@@ -26,15 +26,15 @@ export class TokenInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-        if (this.token !== undefined && this.token !== '') {
-            console.log('token : ' + this.token);
-            const autReturnVal: string = 'Bearer ' + this.token;
-            request = request.clone({
-                setHeaders: {
-                    Authorization: autReturnVal
-                }
-            });
-        }
+        // if (this.token !== undefined && this.token !== '') {
+        //     console.log('token : ' + this.token);
+        //     const autReturnVal: string = 'Bearer ' + this.token;
+        //     request = request.clone({
+        //         setHeaders: {
+        //             Authorization: autReturnVal
+        //         }
+        //     });
+        // }
 
         return next.handle(request);
     }

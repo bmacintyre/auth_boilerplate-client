@@ -15,12 +15,13 @@ import { tokenReducer } from './store/reducers/token.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    BrowserModule, HttpClientModule,
+    BrowserModule, HttpClientModule, BrowserAnimationsModule,
     IonicModule.forRoot(),
     StoreModule.forRoot({tokenState: tokenReducer, userState: userReducer}),
     EffectsModule.forRoot([UserEffects]),
