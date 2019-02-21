@@ -42,7 +42,6 @@ export class AppComponent {
   }
 
   bgClick() {
-    console.log('bgClick');
     this.menuCtrl.close();
   }
 

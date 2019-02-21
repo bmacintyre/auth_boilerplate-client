@@ -11,20 +11,23 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     trigger('listAnimation', [
       transition('* => *', [
 
-        query(':enter', style({ opacity: 0 }), {optional: true}),
+        // query(':enter', style({ opacity: 0 }), {optional: true}),
 
-        query(':enter', stagger('300ms', [
-          animate('0.3s ease-in', keyframes([
-            style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
-            style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
-            style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
-          ]))]), {optional: true})
+        // query(':enter', stagger('300ms', [
+        //   animate('0.3s ease-in', keyframes([
+        //     style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
+        //     style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
+        //     style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
+        //   ]))]), {optional: true})
       ])
     ])
 
   ]
 })
 export class PeoplePage implements OnInit {
+
+  public showPersonDetails = false;
+  public selectedUser: any;
 
   public items = [];
   public data: Array<any>;
@@ -33,13 +36,16 @@ export class PeoplePage implements OnInit {
   private apiUrl = 'http://138.197.171.10/fullstack_php/data.php?s=mobile';
   // private apiUrl = 'http://localhost/auth_boilerplate/api/php/data.php?s=mobile';
 
-  // private apiUrl = 'https://www.uifaces.co/api?limit=1&emotion[]=happiness';
-
-
   // Python 3.x
   // private apiUrl = 'http://localhost:5000/auth_boilerplate/api/python/data';
 
   constructor(public http: HttpClient) {
+  }
+
+  selectUser(user) {
+
+    this.showPersonDetails = true;
+    this.selectedUser = user;
   }
 
   pushItem() {
@@ -57,8 +63,9 @@ export class PeoplePage implements OnInit {
   }
 
   public imageLoaded(indx: number) {
-    console.log('this one loaded: ' + indx);
-    this.items[indx].loaded = true;
+    setTimeout(() => {
+      this.items[indx].loaded = true;
+    }, 1000);
   }
 
   public getData() {

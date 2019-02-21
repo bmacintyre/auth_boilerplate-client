@@ -2,25 +2,68 @@
     .avatar {
         height: 80px;
         width: auto;
+        padding: 8px;
+    }
+
+    .avatar2 {
+        height: 180px;
+        width: auto;
+        max-width: 190px !important;
+        @media (max-width: 462px) {
+            height: 120px;
+            max-width: 120px !important;
+        }
+        float: left;
+        vertical-align: top;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        margin-top: -5px;
+        margin-bottom: -30px;
     }
 
     .profileContainer {
         width: 98%;
         height: auto;
-        // border: #FF0000;
-        // border-style: dashed;
-        // border-width: 1px;
         background: #00000000;
 
     }
-
-    ion-row {
-        width: 50vw;        
+    
+    .labelTxt {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
     }
 
-    ion-col {
+    .labelTxt2 {
+        top: 0;
+        margin: 0;
+        margin-top: -25px;
+        padding: 0;
+    }
+
+    .txtDetailConatiner {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.4em;
+        margin: 30px;
+        width: 95%;
+        padding-bottom: 70px;
+        padding-top: 5px;
+    }
+
+    ion-content {
         margin: 0;
         padding: 0;
+    }
+
+    .emailTxt2 {
+        padding-top: 20px;
+    }
+
+    .titelBlock {
+        margin-top: 35px;
+        vertical-align: top;
     }
 
     .mugShot {
@@ -28,30 +71,64 @@
         height: 150px;
         text-align: center;
         border-radius: 10px;
-        margin: 15px;
-        padding: 6px;
+        margin: 13px;
         background: #ffffffe7;
+        float: right;
         float: left;
-        
     }
 
-    .detailsBlock {
+    .mugShot2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (max-width: 462px) {
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+    }
+
+    .spacer {
+        width: 130px;
+        height: 150px;
+        float: right;
+        float: left;
+    }
+
+    .detailsPopUp {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        width: 110%;
+        height: 100%;
+        background: #000000da;
+        margin-top: -50px;
+    }
+
+    .modalDialog {
         // border: rgb(0, 255, 34);
         // border-style: dashed;
-        height: 100%;
+        height: 35vh;
+        width: 600px !important;
         margin: 0px;
-        margin-left: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20vh;
         padding: 6px;
         background: #ffffffe7;
         border-radius: 10px;
-        float: left;
-        width: 80%;
-        padding-left: 15px;
+        @media (max-width: 462px) {
+            width: 300px !important;
+            height: 70vh;
+            margin-top: 16vh;
+            padding-bottom: 20px;
+        }
+    }
+
+    .lorem {
+        padding-top: 20px;
     }
 
     ul {
         list-style: none;
-        margin-left: calc(5vw * -1);
     }
 
     .inline-flex-parent {
@@ -60,13 +137,13 @@
     
     .container {
         margin: 0;
+        margin-left: -15px;
         padding: 0;
-        height: 90%;
+        height: 95%;
         width: 100%;
         overflow: auto;
-        display: inline-block;
     }
-    
+
     .title {
         padding-left: 15px;
         padding-top: 5px;
@@ -78,7 +155,6 @@
     }
 
   .outerContainer {
-    padding:0;
     button {
         border:none;
         margin-bottom:20px;

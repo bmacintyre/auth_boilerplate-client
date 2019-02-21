@@ -18,10 +18,10 @@ export class LoginService {
 
     constructor(public http: HttpClient, private store: Store<any>, private router: Router) {
         LoginService.instance = this;
-        // if (window.location.href.indexOf('localhost') > -1) {
-        //     console.log('is localhost');
-        //     this.apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
-        // }
+        if (window.location.href.indexOf('localhost') > -1) {
+            console.log('is localhost');
+            this.apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
+        }
     }
 
     public Login(data) {
