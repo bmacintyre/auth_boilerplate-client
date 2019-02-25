@@ -1,8 +1,5 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button autoHide="true"></ion-menu-button>
-        </ion-buttons>
         <ion-title>
             Please Login
         </ion-title>
@@ -11,8 +8,8 @@
 <ion-content>
     <ion-grid class="outerContainer">
         <ion-row class="mainContainerRow">
-            <ion-card>
-                <ion-grid>
+            <ion-card style="height: 200px">
+                <ion-grid style="max-height: 50px !important">
                     <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" autocomplete="off">
                         <ion-row><span style="height: 10px"></span></ion-row>
                         <ion-row>

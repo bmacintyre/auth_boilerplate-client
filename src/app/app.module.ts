@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,9 +16,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './store/effects/user.effects';
 import { UserService } from './services/user.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CounterWrapperComponent } from '../components/counter-wrapper/counter-wrapper';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CounterWrapperComponent],
   entryComponents: [],
   imports: [
     BrowserModule, HttpClientModule, BrowserAnimationsModule,
@@ -38,6 +39,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HttpClientModule,
     UserService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

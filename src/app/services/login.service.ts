@@ -11,17 +11,18 @@ export class LoginService {
 
     // PHP 7.x API
     private apiUrl = 'http://138.197.171.10/fullstack_php/login.php';
+   // private apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
 
 
     // Python 3.x API
     // private apiUrl = 'http://localhost:5000/api';
 
     constructor(public http: HttpClient, private store: Store<any>, private router: Router) {
-        LoginService.instance = this;
-        if (window.location.href.indexOf('localhost') > -1) {
-            console.log('is localhost');
-            this.apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
-        }
+        // LoginService.instance = this;
+        // if (window.location.href.indexOf('localhost') > -1) {
+        //     console.log('is localhost');
+        //     this.apiUrl = 'http://localhost/auth_boilerplate/api/php/login.php';
+        // }
     }
 
     public Login(data) {

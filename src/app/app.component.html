@@ -11,13 +11,18 @@
               'is-active': isLoggedIn,
               'is-inactive': !isLoggedIn
             }">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon color="light" slot="start" [name]="p.icon"></ion-icon>
               <ion-label color="light">
                 {{p.title}}
               </ion-label>
             </ion-item>
+            <!-- <ion-item *ngIf="appPages.length-1 === i" (click)="addToHome($event)">
+                <ion-label color="light">
+                   Add To Home Screen
+                  </ion-label>
+            </ion-item> -->
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

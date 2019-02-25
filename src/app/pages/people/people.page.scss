@@ -6,20 +6,40 @@
     }
 
     .avatar2 {
-        height: 180px;
+        height: auto;
         width: auto;
-        max-width: 190px !important;
-        @media (max-width: 462px) {
-            height: 120px;
+        max-width: 180px !important;
+        margin-top: 0px;
+        @media (max-width: 362px) {
+            height: auto;
             max-width: 120px !important;
         }
-        float: left;
+
+        display: block;
+        margin-bottom: auto;
+    }
+
+    .cropDiv {
+
+        max-height: 130px !important;
+        @media (max-width: 362px) {
+            margin-top: 0px;
+            max-height: 100px !important;
+        }
+       
+        overflow: hidden;
+    }
+    .userSummary {
+        width: 95%;
+        margin-right: auto;
+        margin-left: 20px;
+        text-align: left;
         vertical-align: top;
-        padding-left: 30px;
-        padding-right: 20px;
-        padding-bottom: 5px;
-        margin-top: -5px;
-        margin-bottom: -30px;
+    }
+
+    .topBlock {
+        max-height: 150px;
+        padding-top: 20px;
     }
 
     .profileContainer {
@@ -57,8 +77,19 @@
         padding: 0;
     }
 
-    .emailTxt2 {
-        padding-top: 20px;
+    ion-grid {
+        margin: 0;
+        padding: 0;
+    }
+
+    ion-row {
+        margin: 0;
+        padding: 0;
+    }
+
+    ion-col {
+        margin: 0;
+        padding: 0;
     }
 
     .titelBlock {
@@ -72,16 +103,26 @@
         text-align: center;
         border-radius: 10px;
         margin: 13px;
+        @media (min-width: 400px) {
+            margin: 25px;
+        }
+
+        @media (min-width: 900px) {
+            margin: 18px;
+        }
+
         background: #ffffffe7;
         float: right;
         float: left;
     }
 
     .mugShot2 {
+        margin-top: 10px;
         padding-left: 20px;
         padding-right: 20px;
-        @media (max-width: 462px) {
-            padding-left: 0px;
+        @media (max-width: 362px) {
+            margin-top: 60px;
+            padding-left: 20px;
             padding-right: 20px;
         }
     }
@@ -106,29 +147,57 @@
     .modalDialog {
         // border: rgb(0, 255, 34);
         // border-style: dashed;
-        height: 35vh;
+        height: 55vh;
+        max-height: 310px;
         width: 600px !important;
         margin: 0px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20vh;
         padding: 6px;
+
         background: #ffffffe7;
         border-radius: 10px;
-        @media (max-width: 462px) {
+        @media (max-width: 620px) {
             width: 300px !important;
-            height: 70vh;
-            margin-top: 16vh;
+            max-height: 75vh !important;
+            height: 75vh;
+            margin-top: 70px !important;
+            padding-top: 0px;
             padding-bottom: 20px;
         }
     }
 
     .lorem {
-        padding-top: 20px;
+        // border: rgb(0, 255, 34);
+        // border-style: dashed;
+        margin-bottom: auto;
+        text-align: top;
+
     }
 
     ul {
         list-style: none;
+    }
+
+    .userName {
+        font-size: 1.0em;
+        font-weight: bold;
+        vertical-align: top;
+        margin-top: 0px;
+    }
+
+    .jobPosition {
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-top: 0px;
+    }
+
+    .emailTxt2 {
+        padding-top: 20px;
+        margin-top: -10px;
+        vertical-align: top;
+        font-size: 0.7em;
     }
 
     .inline-flex-parent {

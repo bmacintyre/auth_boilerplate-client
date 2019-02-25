@@ -33,7 +33,7 @@ export class PeoplePage implements OnInit {
   public data: Array<any>;
 
   // PHP 7.x
-  private apiUrl = 'http://138.197.171.10/fullstack_php/data.php?s=mobile';
+   private apiUrl = 'http://138.197.171.10/fullstack_php/data.php?s=mobile';
   // private apiUrl = 'http://localhost/auth_boilerplate/api/php/data.php?s=mobile';
 
   // Python 3.x
@@ -97,7 +97,7 @@ export class PeoplePage implements OnInit {
             };
           });
 
-          console.log(this.data);
+          // console.log(this.data);
         },
 
         response => {

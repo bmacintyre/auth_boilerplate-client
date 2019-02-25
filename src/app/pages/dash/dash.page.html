@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="true"></ion-menu-button>
+      <ion-menu-button autoHide="true" color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>Dashboard</ion-title>
     <ion-buttons slot="end">
@@ -30,12 +30,18 @@
 </ion-header>
 
 <ion-content>
-  <div class="outerContainer">
-     <br><br><br>
-   
-        <canvas class="doughnutChart" #doughnutCanvas></canvas>
-
+  <div ion-fixed>
+    <div class="outerContainer">
+      <div class="charts">
+        <div class="offsetContainer">
+          <canvas class="doughnutChart" #doughnutCanvas></canvas>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="offsetContainer" style="position: absolute; margin-top: -45px">
+          <canvas class="bubbleChart" id="bubble-chart"></canvas>
+        </div>
+      </div>
+    </div>
   </div>
-
-
 </ion-content>

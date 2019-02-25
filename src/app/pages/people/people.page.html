@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="true"></ion-menu-button>
+      <ion-menu-button autoHide="true" color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>People</ion-title>
   </ion-toolbar>
@@ -18,11 +18,11 @@
         <div class="positionalDiv" *ngFor="let item of items; let i = index">
           <li>
             <div class="mugShot" (click)="selectUser(item)">
-          
+
               <ion-spinner style="margin-top: 20px" [ngStyle]="{'display': (!!item.loaded && item.loaded === true) ? 'none' : 'visible'}"></ion-spinner>
               <ion-img class="avatar" style="margin-top: 10px" src='{{ item.photo }}' (ionImgDidLoad)="imageLoaded(i)"
                 [ngStyle]="{'height': (!!item.loaded && item.loaded === true) ? '80px' : '0px', 'opacity': (!!item.loaded && item.loaded === true) ? '1' : '0'}"></ion-img>
-    
+
               <h6 class="labelTxt"><b>{{ item.name }}</b></h6>
             </div>
             <div class="spacer" *ngIf="i === items.length-1" style="height: 100px"></div>
@@ -34,22 +34,34 @@
       <div class="detailsPopUp" *ngIf="showPersonDetails === true" (click)="showPersonDetails = false">
         <div class="modalDialog">
           <div class="mugShot2">
-            <ion-img class="avatar2" src='{{ selectedUser.photo }}'></ion-img>
-            <div class="txtDetailConatiner">
-                <div class="titelBlock">
-                    <h6 class="labelTxt2"><b>{{ selectedUser.name }}</b></h6>
-                    <h4 class="title"><b>{{ selectedUser.position }}</b></h4>
+            <ion-grid>
+              <ion-row class="topBlock">
+                <ion-col size="4" size-md="3">
+                  <div class="cropDiv">
+                    <ion-img class="avatar2" src='{{ selectedUser.photo }}'></ion-img>
+                  </div>
+                </ion-col>
+                <ion-col size="auto">
+                  <div class="userSummary">
+                    <p class="userName">{{ selectedUser.name }}</p>
+                    <p class="jobPosition">{{ selectedUser.position }}</p>
+                    <p class="emailTxt2">{{ selectedUser.email }}</p>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <div scrollable="detailsText">
+                  <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
                 </div>
-                <h5 class="emailTxt2">{{ selectedUser.email }}</h5>
-                <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.</p>
-              </div>
-            </div>
+              </ion-row>
+            </ion-grid>
+          </div>
         </div>
       </div>
-
-
       <!-- </div> -->
     </div>
   </div>
